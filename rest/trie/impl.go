@@ -71,7 +71,9 @@ func (n *node) addRoute(httpMethod, pathExp string, route interface{}, usedParam
 	if token[0] == ':' {
 		// :param case
 		var name string
+                fmt.Println(remaining)
 		name, remaining = splitParam(remaining)
+                fmt.Println(name, remaining)
 
 		// Check param name is unique
 		for _, e := range usedParams {
